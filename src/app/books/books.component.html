@@ -1,0 +1,13 @@
+<h1 class="text-center py-4 text-3xl">Programming Books List</h1>
+<!-- <button (click)="isShowing = !isShowing">
+  <ng-container *ngIf="!isShowing">Show Books</ng-container>
+  <ng-container *ngIf="isShowing">Hide Books</ng-container>
+</button> -->
+<!-- <input type="text" [(ngModel)]="myName" /> -->
+<!-- <p>{{ myName }}</p> -->
+
+<ul class="grid grid-cols-2 gap-8 p-6" *ngIf="isShowing">
+  <ng-container class="" *ngFor="let singleBook of books; let i = index">
+    <app-book [book]="singleBook"></app-book>
+  </ng-container>
+</ul>
